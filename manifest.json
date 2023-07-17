@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Water Reminder Buddy",
+  "version": "1.0",
+  "description": "Its recommended we drink 8 bottles of water a day. However, sometimes we forget. With this extension you are reminded at whatever interval you choose to stand up and drink some water.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": "icon16.png"
+  },
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

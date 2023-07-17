@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Water Buddy Reminder</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+    body {
+      width: 250px;
+      height: 250px;
+      background-image: url("background.jpg");
+      font-family: 'Lilita One', cursive;
+      font-size: 16px;
+      color: rgb(34, 131, 243);
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    h1 {
+      color: rgb(34, 131, 243);
+      text-align: center;
+    }
+    #submissionMessage {
+      font-size: 14px;
+      text-align: center;
+    }
+    #myForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #inputValue {
+      margin-top:10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    #submitButton {
+      padding: 5px 10px;
+      background-color: rgb(34, 131, 243);
+      border-radius: 5px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    #submitButton:hover {
+  transform: translateY(-5px);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Water Buddy Reminder</h1>
+  <div id="submissionMessage"></div>
+  <form id="myForm">
+    <label for="inputValue">Enter how long until next sip:</label>
+    <input type="number" id="inputValue" placeholder="Recommended: 60" />
+    <input type="submit" id="submitButton" value="Submit" />
+  </form>
+
+  <script src="content.js"></script>
+</body>
+</html>
